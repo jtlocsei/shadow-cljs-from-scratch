@@ -1,0 +1,44 @@
+;; shadow-cljs configuration
+{:source-paths ["src"]
+
+ :dependencies [;; By including binaryage/devtools in :dependencies
+                ;; it is automatically added to preloads for development.
+                ;; See https://shadow-cljs.github.io/docs/UsersGuide.html#_preloads
+                [binaryage/devtools "0.9.10"]
+                ;; Get the latest reagent from
+                ;; https://github.com/reagent-project/reagent
+                [reagent "0.8.1"]]
+
+
+ :nrepl {;; Doesn't matter what you choose for :port
+         :port 3333}
+
+ :builds {;; If a build is called :app then in development at the terminal you'd run
+          ;; shadow-cljs watch app
+          ;; To switch into the clojurescript repl you'd run (in the clojure repl)
+          ;; (shadow/repl :app)
+          ;; To build the production code at the terminal you'd run
+          ;; shadow-cljs release app
+          :app {;; Target must be :browser for a web app
+                :target :browser
+
+                ;; Directory where the generated js files go
+                ;; Choose support-files subdirectory because that's what SBI uses,
+                ;; so if we use that then our output can be run on SBI
+                :output-dir "public/support-files"
+                ;; Directory of js files relative to web server's root
+                :asset-path "/support-files"
+
+                ;; Easiest to just use one module.
+                ;; Each key (e.g. :main) will turn into a js file (e.g. main.js)
+                ;; in the :output-dir directory.
+                ;; See https://shadow-cljs.github.io/docs/UsersGuide.html#_modules
+                :modules {:main {:entries [my-app.core]}}
+
+                :devtools {;; Set :http-root to the root of the web server
+                           ;; This is usually the first part of :output-dir
+                           :http-root "public"
+                           ;; Doesn't matter what you set :http-port to. Better don't use
+                           ;; 3000 to avoid conflict with SBI's QUI
+                           :http-port 3010}}}}
+
