@@ -7,7 +7,10 @@
                 [binaryage/devtools "0.9.10"]
                 ;; Get the latest reagent from
                 ;; https://github.com/reagent-project/reagent
-                [reagent "0.8.1"]]
+                [reagent "0.8.1"]
+                ;; If using re-frame, uncomment the next two lines
+                [re-frame "0.10.6"]
+                [day8.re-frame/re-frame-10x "0.4.1"]]
 
 
  :nrepl {;; Doesn't matter what you choose for :port
