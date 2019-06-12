@@ -1,20 +1,21 @@
 {
-  "//": "See example minimal setup here: https://github.com/lauritzsh/reagent-shadow-cljs-starter/blob/master/package.json",
+  "//0": "Items like me are comments. We need unique keys otherwise we get deleted when you run `npm install`",
+  "//1": "See example minimal setup here: https://github.com/lauritzsh/reagent-shadow-cljs-starter/blob/master/package.json",
   "private": true,
   "scripts": {
     "dev": "npx shadow-cljs watch app",
     "release": "npx shadow-cljs release app"
   },
+  "//2": "Reagent or Re-frame apps depend on: react, react-dom, & create-react class. Find latest versions from command line with `npm search -l react`",
   "dependencies": {
-    "//": "Reagent or Re-frame apps depend on: react, react-dom, & create-react class. Find latest versions from command line with `npm search -l react`",
     "create-react-class": "15.6.3",
     "highlight.js": "^9.15.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
+  "//3": "Re-frame 10x depends on: react-flip-move, react-highlight.js",
   "devDependencies": {
     "shadow-cljs": "2.8.39",
-    "//": "Re-frame 10x depends on: react-flip-move, react-highlight.js",
     "react-flip-move": "^3.0.3",
     "react-highlight.js": "^1.0.7"
   }
