@@ -1,2 +1,5 @@
 shadow-cljs-from-scratch.iml
 .idea
+.shadow-cljs
+node_modules
+.nrepl-port
