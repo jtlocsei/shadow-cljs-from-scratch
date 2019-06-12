@@ -1,5 +1,5 @@
 {
-  "//0": "Items like me are comments. We need unique keys otherwise we get deleted when you run `npm install`",
+  "//0": "Items like this are a hack for including comments. They need unique keys otherwise they get deleted when you run `npm install`",
   "//1": "See example minimal setup here: https://github.com/lauritzsh/reagent-shadow-cljs-starter/blob/master/package.json",
   "private": true,
   "scripts": {

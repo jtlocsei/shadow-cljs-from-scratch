@@ -3,3 +3,6 @@ shadow-cljs-from-scratch.iml
 .shadow-cljs
 node_modules
 .nrepl-port
+public/support-files/cljs-runtime
+public/support-files/main.js
+public/support-files/manifest.edn

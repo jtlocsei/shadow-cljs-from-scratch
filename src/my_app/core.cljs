@@ -1,11 +1,9 @@
 (ns my-app.core
   (:require [reagent.core :as r]))
 
-(defonce greeting "hello")
-(def who "world")
 
 (defn app []
-  [:div greeting " " who])
+  [:h1 "Hi there, world!"])
 
 (defn ^:dev/before-load stop []
   (js/console.log "Stopping..."))
